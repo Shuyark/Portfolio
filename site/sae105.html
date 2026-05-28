@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAE 1.05 - Portfolio</title>
+  <title>Projet 1.05 - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -23,8 +23,8 @@
 
   <main>
     <div class="page-header">
-      <a href="sae.html" class="back-link">← Retour aux SAE</a>
-      <span class="sae-code-large">SAE 1.05</span>
+      <a href="sae.html" class="back-link">← Retour aux projets</a>
+      <span class="sae-code-large">Projet 1.05</span>
       <h1>Traitement de données géographiques via API</h1>
       <div class="sae-tags" style="margin-top:1rem;">
         <span class="tag">Semestre 1</span>
@@ -41,9 +41,9 @@
       <div class="sae-section-block">
         <div class="section-header"><span class="accordion-num">01</span><span class="section-title">Description / Objectif</span></div>
         <div class="section-body">
-          <p>Cette SAE avait pour objectif de créer un programme Python capable de récupérer des données géographiques depuis OpenStreetMap, de les traiter, puis de produire un résultat lisible sous forme de fichier Markdown ou HTML. Le projet ne consistait donc pas seulement à écrire du code : il fallait d'abord trouver un sujet exploitable, formuler une requête correcte, récupérer des données réelles et les transformer en statistiques compréhensibles.</p>
+          <p>Ce projet avait pour objectif de créer un programme Python capable de récupérer des données géographiques depuis OpenStreetMap, de les traiter, puis de produire un résultat lisible sous forme de fichier Markdown ou HTML. Le projet ne consistait donc pas seulement à écrire du code : il fallait d'abord trouver un sujet exploitable, formuler une requête correcte, récupérer des données réelles et les transformer en statistiques compréhensibles.</p>
           <p>Après une phase de recherche, j'ai choisi de travailler sur les supermarchés en Normandie. Ce sujet permettait d'utiliser des données OpenStreetMap concrètes avec le tag <code>shop=supermarket</code>, puis de comparer la présence de plusieurs enseignes comme Carrefour, Leclerc, Intermarché, Lidl et Auchan.</p>
-          <p><strong>Mon rôle personnel :</strong> cette SAE était centrée sur mon propre programme. J'ai choisi le sujet, écrit la requête Overpass, adapté les scripts Python, corrigé les erreurs rencontrées et produit les fichiers de sortie Markdown puis HTML.</p>
+          <p><strong>Mon rôle personnel :</strong> ce projet était centré sur mon propre programme. J'ai choisi le sujet, écrit la requête Overpass, adapté les scripts Python, corrigé les erreurs rencontrées et produit les fichiers de sortie Markdown puis HTML.</p>
           <p>Le projet s'organisait autour de plusieurs étapes :</p>
           <ul>
             <li>Définir un sujet assez précis pour obtenir des données exploitables dans OpenStreetMap</li>
@@ -133,7 +133,7 @@
       <div class="sae-section-block">
         <div class="section-header"><span class="accordion-num">06</span><span class="section-title">Problèmes rencontrés / points complexes</span></div>
         <div class="section-body">
-          <p>Cette SAE a été assez difficile pour moi, principalement parce que je ne suis pas encore très à l'aise avec Python. J'ai dû prendre le temps de comprendre comment organiser les fonctions, comment récupérer une réponse d'API, comment accéder aux informations dans un dictionnaire JSON et comment éviter que le programme s'arrête dès qu'une donnée manque.</p>
+          <p>Ce projet a été assez difficile pour moi, principalement parce que je ne suis pas encore très à l'aise avec Python. J'ai dû prendre le temps de comprendre comment organiser les fonctions, comment récupérer une réponse d'API, comment accéder aux informations dans un dictionnaire JSON et comment éviter que le programme s'arrête dès qu'une donnée manque.</p>
           <p>Une autre difficulté venait d'OpenStreetMap et de l'API Overpass. Le service était parfois surchargé par les requêtes, ce qui pouvait ralentir ou bloquer la récupération des données. Il fallait donc tester plusieurs fois, réduire ou adapter les requêtes et accepter que le résultat ne dépende pas uniquement du code, mais aussi de la disponibilité du serveur.</p>
           <p>Le choix du sujet a aussi demandé du temps. Il fallait trouver un thème assez intéressant, mais surtout assez bien renseigné dans OpenStreetMap. Les supermarchés étaient un bon compromis, car ils sont nombreux, faciles à identifier avec un tag précis et permettent de produire des statistiques simples à comprendre.</p>
           <p>Le traitement des données JSON a été le passage le plus technique. Les objets OpenStreetMap ne possèdent pas tous les mêmes champs : certains n'ont pas de nom, d'autres n'ont pas les tags attendus, et les enseignes peuvent être écrites différemment. Il fallait donc vérifier l'existence des données avant de les utiliser et prévoir des conditions pour éviter les erreurs.</p>
@@ -290,7 +290,7 @@ def get_dataset(query: str) -&gt; dict:
       <div class="sae-section-block">
         <div class="section-header"><span class="accordion-num">09</span><span class="section-title">Autoévaluation</span></div>
         <div class="section-body">
-          <p><strong>Bilan personnel :</strong> Cette SAE m'a demandé plus d'efforts que d'autres projets, car Python reste un langage avec lequel j'ai encore des difficultés. Malgré cela, le projet m'a permis de mieux comprendre la logique d'un programme découpé en fonctions et l'intérêt de tester étape par étape.</p>
+          <p><strong>Bilan personnel :</strong> Ce projet m'a demandé plus d'efforts que d'autres projets, car Python reste un langage avec lequel j'ai encore des difficultés. Malgré cela, le projet m'a permis de mieux comprendre la logique d'un programme découpé en fonctions et l'intérêt de tester étape par étape.</p>
           <p><strong>Apprentissages :</strong> J'ai appris à interroger une API, à manipuler des données JSON, à sélectionner des informations utiles et à les transformer en statistiques. J'ai aussi compris qu'un projet de données commence souvent avant le code, avec le choix du sujet et la vérification que les données existent réellement.</p>
           <p><strong>Positionnement :</strong> Je me positionne en <em>acquisition</em> sur Python. Je comprends mieux le fonctionnement général d'un script et d'une API, mais j'ai encore besoin de pratiquer pour gagner en autonomie, surtout sur la gestion des erreurs, les structures de données et l'organisation du code.</p>
           <p><strong>Amélioration possible :</strong> je pourrais améliorer le programme en ajoutant une meilleure gestion des erreurs, un contrôle du cas où aucune donnée n'est trouvée et une sortie HTML plus structurée. Cela rendrait l'outil plus fiable et plus proche d'un usage professionnel.</p>
