@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAE 1.05 - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">TJ</a>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="profil.html">Profil & Projection</a>
+        <a href="sae.html" class="active">Présentation des SAE</a>
+        <a href="bilan.html">Bilan par compétence</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <a href="sae.html" class="back-link">← Retour aux SAE</a>
+      <span class="sae-code-large">SAE 1.05</span>
+      <h1>Traitement de données géographiques via API</h1>
+      <div class="sae-tags" style="margin-top:1rem;">
+        <span class="tag">Semestre 1</span>
+        <span class="tag">Python</span>
+        <span class="tag">API REST</span>
+        <span class="tag">OpenStreetMap</span>
+        <span class="tag">Data</span>
+        <span class="tag">Markdown</span>
+      </div>
+    </div>
+
+    <div class="sections-list">
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">01</span><span class="section-title">Description / Objectif</span></div>
+        <div class="section-body">
+          <p>Cette SAE avait pour objectif de créer un programme Python capable de récupérer des données géographiques depuis OpenStreetMap, de les traiter, puis de produire un résultat lisible sous forme de fichier Markdown ou HTML. Le projet ne consistait donc pas seulement à écrire du code : il fallait d'abord trouver un sujet exploitable, formuler une requête correcte, récupérer des données réelles et les transformer en statistiques compréhensibles.</p>
+          <p>Après une phase de recherche, j'ai choisi de travailler sur les supermarchés en Normandie. Ce sujet permettait d'utiliser des données OpenStreetMap concrètes avec le tag <code>shop=supermarket</code>, puis de comparer la présence de plusieurs enseignes comme Carrefour, Leclerc, Intermarché, Lidl et Auchan.</p>
+          <p><strong>Mon rôle personnel :</strong> cette SAE était centrée sur mon propre programme. J'ai choisi le sujet, écrit la requête Overpass, adapté les scripts Python, corrigé les erreurs rencontrées et produit les fichiers de sortie Markdown puis HTML.</p>
+          <p>Le projet s'organisait autour de plusieurs étapes :</p>
+          <ul>
+            <li>Définir un sujet assez précis pour obtenir des données exploitables dans OpenStreetMap</li>
+            <li>Écrire une requête Overpass pour récupérer les supermarchés situés en Normandie</li>
+            <li>Utiliser Python et la bibliothèque <code>requests</code> pour interroger l'API</li>
+            <li>Parcourir les réponses JSON afin d'extraire les noms et les informations utiles</li>
+            <li>Calculer des statistiques sur les enseignes les plus représentées</li>
+            <li>Générer automatiquement un fichier Markdown, puis le convertir en HTML</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">02</span><span class="section-title">Vocabulaire</span></div>
+        <div class="section-body">
+          <ul>
+            <li><strong>API :</strong> interface qui permet à un programme de demander des informations à un service en ligne.</li>
+            <li><strong>OpenStreetMap :</strong> base de données cartographique collaborative utilisée pour récupérer des informations géographiques réelles.</li>
+            <li><strong>Overpass API :</strong> service permettant de faire des recherches précises dans les données OpenStreetMap.</li>
+            <li><strong>Overpass QL :</strong> langage de requête utilisé pour demander à OpenStreetMap des objets précis, par exemple les supermarchés d'une région.</li>
+            <li><strong>JSON :</strong> format de données renvoyé par l'API, organisé avec des listes, des dictionnaires et des paires clé/valeur.</li>
+            <li><strong>Markdown :</strong> format simple permettant de produire un document lisible avec des titres et des listes.</li>
+            <li><strong>HTML :</strong> langage utilisé pour afficher le résultat final dans une page web.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">03</span><span class="section-title">Programmes Python réalisés</span></div>
+        <div class="section-body">
+          <p>Plusieurs scripts Python ont été utilisés pour construire progressivement le projet :</p>
+          <ul>
+            <li><strong><code>sae15.py</code> :</strong> script principal du projet. Il contient la requête Overpass sur les supermarchés en Normandie, la récupération des données, le calcul des statistiques et la génération du résultat.</li>
+            <li><strong><code>fiche_osm.py</code> :</strong> script permettant de récupérer les attributs d'un noeud OpenStreetMap précis à partir de son identifiant, puis de générer une fiche descriptive.</li>
+            <li><strong><code>md_to_html.py</code> :</strong> script plus court servant à convertir un fichier Markdown en fichier HTML grâce à la bibliothèque <code>markdown</code>.</li>
+          </ul>
+          <p>Dans le script principal, la fonction de récupération interroge l'API Overpass, puis les données sont parcourues élément par élément. Le programme vérifie si chaque objet possède des tags et un nom, puis il compte les enseignes reconnues. À la fin, les pourcentages sont calculés pour comparer la présence des principales chaînes de supermarchés.</p>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">04</span><span class="section-title">Apprentissages critiques (AC)</span></div>
+        <div class="section-body">
+          <ul>
+            <li>
+              <strong>AC13.02 - Lire, exécuter, corriger et modifier un programme</strong> -
+              Lecture et correction de scripts Python, notamment pour comprendre la structure des réponses JSON, gérer les données manquantes et corriger les erreurs liées aux requêtes.
+            </li>
+            <li>
+              <strong>AC13.03 - Traduire un algorithme dans un langage donné</strong> -
+              Transformation d'une idée de départ en étapes de programmation : récupérer les données, parcourir les éléments, reconnaître les enseignes, compter les résultats et produire un fichier final.
+            </li>
+            <li>
+              <strong>AC13.04 - Connaître l'architecture et les technologies d'un site Web</strong> -
+              Utilisation d'une API web, compréhension des requêtes HTTP et conversion d'un résultat Markdown en HTML pour obtenir un rendu consultable dans un navigateur.
+            </li>
+            <li>
+              <strong>AC13.05 - Choisir les mécanismes de gestion de données adaptés</strong> -
+              Utilisation de listes et de dictionnaires Python pour manipuler les données OpenStreetMap, puis calcul de statistiques simples à partir des informations collectées.
+            </li>
+            <li>
+              <strong>AC13.06 - S'intégrer dans un environnement de développement</strong> -
+              Organisation du travail en plusieurs fichiers Python afin de séparer la récupération des données, la création de fiches et la conversion Markdown vers HTML.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">05</span><span class="section-title">Tâches réalisées</span></div>
+        <div class="section-body">
+          <p>Le travail réalisé a suivi une démarche progressive :</p>
+          <ul>
+            <li>Recherche d'un thème compatible avec les données disponibles sur OpenStreetMap</li>
+            <li>Choix du sujet des supermarchés en Normandie pour obtenir un ensemble de données clair et comparable</li>
+            <li>Écriture d'une requête Overpass avec une zone de recherche et le filtre <code>shop=supermarket</code></li>
+            <li>Récupération des données avec Python grâce au module <code>requests</code></li>
+            <li>Analyse des champs <code>tags</code> et <code>name</code> dans les objets renvoyés par l'API</li>
+            <li>Comptage des enseignes Carrefour, Leclerc, Intermarché, Lidl et Auchan</li>
+            <li>Calcul de pourcentages pour comparer la présence de chaque enseigne</li>
+            <li>Création d'un fichier Markdown contenant les résultats</li>
+            <li>Conversion du Markdown en HTML pour rendre les résultats plus faciles à consulter</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">06</span><span class="section-title">Problèmes rencontrés / points complexes</span></div>
+        <div class="section-body">
+          <p>Cette SAE a été assez difficile pour moi, principalement parce que je ne suis pas encore très à l'aise avec Python. J'ai dû prendre le temps de comprendre comment organiser les fonctions, comment récupérer une réponse d'API, comment accéder aux informations dans un dictionnaire JSON et comment éviter que le programme s'arrête dès qu'une donnée manque.</p>
+          <p>Une autre difficulté venait d'OpenStreetMap et de l'API Overpass. Le service était parfois surchargé par les requêtes, ce qui pouvait ralentir ou bloquer la récupération des données. Il fallait donc tester plusieurs fois, réduire ou adapter les requêtes et accepter que le résultat ne dépende pas uniquement du code, mais aussi de la disponibilité du serveur.</p>
+          <p>Le choix du sujet a aussi demandé du temps. Il fallait trouver un thème assez intéressant, mais surtout assez bien renseigné dans OpenStreetMap. Les supermarchés étaient un bon compromis, car ils sont nombreux, faciles à identifier avec un tag précis et permettent de produire des statistiques simples à comprendre.</p>
+          <p>Le traitement des données JSON a été le passage le plus technique. Les objets OpenStreetMap ne possèdent pas tous les mêmes champs : certains n'ont pas de nom, d'autres n'ont pas les tags attendus, et les enseignes peuvent être écrites différemment. Il fallait donc vérifier l'existence des données avant de les utiliser et prévoir des conditions pour éviter les erreurs.</p>
+          <p>La génération automatique du Markdown puis du HTML était aussi complexe, car le programme devait produire un résultat lisible sans écrire les statistiques à la main. Cela m'a obligé à mieux comprendre les fichiers, les chaînes de caractères, les boucles et la transformation d'un résultat brut en document exploitable.</p>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">07</span><span class="section-title">Résultats obtenus</span></div>
+        <div class="section-body">
+          <ul>
+            <li>Un script Python principal capable d'interroger l'API Overpass sur les supermarchés en Normandie</li>
+            <li>Des statistiques sur la présence de plusieurs enseignes de supermarchés</li>
+            <li>Un fichier Markdown généré automatiquement à partir des résultats</li>
+            <li>Une conversion du fichier Markdown en HTML</li>
+            <li>Des fonctions Python permettant aussi de consulter les attributs d'un noeud OpenStreetMap précis</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">08</span><span class="section-title">Preuves et traces de code</span></div>
+        <div class="section-body">
+          <p>Voici des extraits de mes programmes Python. Les commentaires montrent les parties qui m'ont demandé le plus de travail, surtout la requête OpenStreetMap, le parcours des données JSON et le calcul des statistiques.</p>
+          <ul>
+            <li><strong>Script principal commenté :</strong> cette preuve montre le coeur du projet. Elle permet de vérifier que le programme sait interroger l'API Overpass, récupérer des données OpenStreetMap, compter les enseignes et produire des statistiques. Les commentaires expliquent les passages difficiles, notamment la requête et le traitement des données manquantes.</li>
+            <li><strong>Fiche OSM commentée :</strong> cette preuve montre que je sais récupérer les informations d'un objet OpenStreetMap précis. Elle est utile car elle prouve ma compréhension de la structure des données OSM : identifiant, tags, attributs et extraction d'informations ciblées.</li>
+            <li><strong>Conversion Markdown / HTML :</strong> cette preuve montre la dernière étape du projet : rendre les résultats consultables dans un format plus propre. Elle démontre que le programme ne se contente pas de calculer des valeurs, mais qu'il produit un livrable lisible.</li>
+            <li><strong>Extraits de code intégrés dans la page :</strong> ils servent à expliquer directement les parties complexes : requête Overpass, vérification des champs JSON, calcul des pourcentages et génération automatique du rapport. Ces extraits rendent la preuve plus claire, car ils montrent précisément où se trouvent les difficultés techniques.</li>
+          </ul>
+
+          <div class="proof-container">
+            <a href="code/sae15_commente.py" target="_blank" class="proof-item proof-file">
+              <p>Voir le script principal commenté</p>
+            </a>
+            <a href="code/fiche_osm_commente.py" target="_blank" class="proof-item proof-file">
+              <p>Voir la fiche OSM commentée</p>
+            </a>
+            <a href="code/md_to_html_commente.py" target="_blank" class="proof-item proof-file">
+              <p>Voir la conversion Markdown / HTML</p>
+            </a>
+          </div>
+
+          <p><strong>Requête OpenStreetMap / Overpass utilisée dans <code>sae15.py</code></strong></p>
+          <pre class="code-proof"><code>demande = """[out:json][timeout:180];
+
+area["name"="Normandie"]["admin_level"="4"]-&gt;.zone_de_recherche;
+
+# Partie compliquée :
+# il fallait trouver un sujet assez précis et une zone correcte.
+# Au début, OpenStreetMap / Overpass était parfois surchargé,
+# donc la requête pouvait être lente ou ne pas répondre.
+nwr["shop"="supermarket"](area.zone_de_recherche);
+
+out geom;
+"""
+
+def get_dataset(query: str) -&gt; dict:
+    url = "https://overpass-api.de/api/interpreter?data=" + str(query)
+    r = requests.get(url)
+
+    # Partie compliquée :
+    # si le serveur Overpass est surchargé, cette ligne peut échouer
+    # ou renvoyer une réponse impossible à exploiter.
+    rep = r.json()
+    return rep</code></pre>
+
+          <p><strong>Traitement des données et calcul des statistiques</strong></p>
+          <pre class="code-proof"><code>def compute_statist(data):
+    carrefour = 0
+    leclerc = 0
+    intermarche = 0
+    lidl = 0
+    auchan = 0
+
+    for element in data["elements"]:
+        # Partie compliquée :
+        # toutes les données OpenStreetMap n'ont pas les mêmes champs.
+        # Il faut donc vérifier que "tags" et "name" existent
+        # avant d'essayer de les utiliser.
+        if "tags" not in element:
+            continue
+        if "name" not in element["tags"]:
+            continue
+
+        nom = element["tags"]["name"].lower()
+
+        # Partie compliquée :
+        # les noms ne sont pas toujours écrits exactement pareil.
+        # Il faut donc chercher des mots dans le nom complet.
+        if "carrefour" in nom:
+            carrefour += 1
+        elif "leclerc" in nom:
+            leclerc += 1
+        elif "intermarché" in nom or "intermarche" in nom:
+            intermarche += 1
+        elif "lidl" in nom:
+            lidl += 1
+        elif "auchan" in nom:
+            auchan += 1
+
+    total = carrefour + leclerc + intermarche + lidl + auchan
+
+    # Partie compliquée :
+    # il fallait transformer les comptages en pourcentages
+    # pour obtenir une comparaison plus compréhensible.
+    stat_carrefour = (carrefour * 100) / total
+    stat_leclerc = (leclerc * 100) / total
+    stat_intermarche = (intermarche * 100) / total
+    stat_lidl = (lidl * 100) / total
+    stat_auchan = (auchan * 100) / total
+
+    return stat_carrefour, stat_leclerc, stat_intermarche, stat_lidl, stat_auchan</code></pre>
+
+          <p><strong>Génération du rapport Markdown puis HTML</strong></p>
+          <pre class="code-proof"><code>def stats_supermarches(query, fichier_md: str, fichier_html: str):
+    c, l, i, li, a = compute_statist(get_dataset(query))
+    stats = {
+        "Carrefour": c,
+        "Leclerc": l,
+        "Intermarché": i,
+        "Lidl": li,
+        "Auchan": a
+    }
+
+    contenu = "# Supermarchés en Normandie\n"
+    contenu += "* lien osm :\n"
+
+    # Partie compliquée :
+    # il fallait générer un fichier lisible automatiquement,
+    # sans écrire les résultats à la main.
+    for nom, valeur in stats.items():
+        contenu += "* " + str(nom) + ": " + str(valeur) + "\n"
+
+    with open(fichier_md, "w") as f:
+        f.write(contenu)
+
+    with open(fichier_md, "r") as f:
+        text = f.read()
+        html = markdown.markdown(text)
+
+    with open(fichier_html, "w") as f:
+        f.write(html)
+
+    return (
+        "Résultats :",
+        stats,
+        "Le supermarché le plus présent en Normandie est :",
+        max(stats, key=stats.get)
+    )</code></pre>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">09</span><span class="section-title">Autoévaluation</span></div>
+        <div class="section-body">
+          <p><strong>Bilan personnel :</strong> Cette SAE m'a demandé plus d'efforts que d'autres projets, car Python reste un langage avec lequel j'ai encore des difficultés. Malgré cela, le projet m'a permis de mieux comprendre la logique d'un programme découpé en fonctions et l'intérêt de tester étape par étape.</p>
+          <p><strong>Apprentissages :</strong> J'ai appris à interroger une API, à manipuler des données JSON, à sélectionner des informations utiles et à les transformer en statistiques. J'ai aussi compris qu'un projet de données commence souvent avant le code, avec le choix du sujet et la vérification que les données existent réellement.</p>
+          <p><strong>Positionnement :</strong> Je me positionne en <em>acquisition</em> sur Python. Je comprends mieux le fonctionnement général d'un script et d'une API, mais j'ai encore besoin de pratiquer pour gagner en autonomie, surtout sur la gestion des erreurs, les structures de données et l'organisation du code.</p>
+          <p><strong>Amélioration possible :</strong> je pourrais améliorer le programme en ajoutant une meilleure gestion des erreurs, un contrôle du cas où aucune donnée n'est trouvée et une sortie HTML plus structurée. Cela rendrait l'outil plus fiable et plus proche d'un usage professionnel.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Portfolio · Théotime Jouisse · BUT Réseaux & Télécommunications · <span id="year"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

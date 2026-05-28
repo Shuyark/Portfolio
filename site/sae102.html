@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAE 1.02 – Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">TJ</a>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="profil.html">Profil & Projection</a>
+        <a href="sae.html" class="active">Présentation des SAE</a>
+        <a href="bilan.html">Bilan par compétence</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <a href="sae.html" class="back-link">← Retour aux SAE</a>
+      <span class="sae-code-large">SAE 1.02</span>
+      <h1>S'initier aux réseaux informatiques</h1>
+      <div class="sae-tags" style="margin-top:1rem;">
+        <span class="tag">Semestre 1</span>
+        <span class="tag">Réseaux</span>
+        <span class="tag">Cisco</span>
+        <span class="tag">Routage</span>
+        <span class="tag">Travail en équipe</span>
+      </div>
+    </div>
+
+    <div class="sections-list">
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">01</span><span class="section-title">Description / Objectif</span></div>
+        <div class="section-body">
+          <p>Cette SAE avait pour objectif de nous initier aux réseaux informatiques à travers la mise en œuvre d'un prototype pour une entreprise fictive, Fibre&amp;Company, spécialisée dans le déploiement de la fibre optique. L'entreprise possédait au départ un réseau très basique et peu sécurisé, composé d'une soixantaine de postes, de deux switchs non paramétrables et d'une connexion Internet via une box.</p>
+          <p>Le projet consistait à préparer l'évolution de cette infrastructure afin d'accompagner le doublement des effectifs de l'entreprise. Il fallait concevoir un réseau plus structuré, sécurisé et administrable, en utilisant du matériel paramétrable : commutateurs Cisco, routeur LAN/WAN, machine virtuelle Debian et serveur Proxmox.</p>
+          <p>La mission demandait notamment la création de VLAN correspondant aux services de l'entreprise, la mise en place du routage inter-VLAN, d'un plan d'adressage IPv4, d'un service DHCP, ainsi que l'installation de services réseau sur Debian comme le DNS cache, le partage de fichiers SMB, un serveur web Apache2 et, selon l'avancement, un service TFTP. Une partie du travail portait aussi sur la sécurisation des équipements, l'accès SSH, les tests de fonctionnement et la documentation des résultats.</p>
+          <p><strong>Mon rôle personnel :</strong> j'ai participé à la conception du plan d'adressage, aux schémas réseau et aux tests de connectivité. Dans le groupe, mon apport a surtout porté sur la cohérence entre la topologie, les VLAN et les vérifications réalisées après configuration.</p>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">02</span><span class="section-title">Vocabulaire</span></div>
+        <div class="section-body">
+          <ul>
+            <li><strong>Infrastructure réseau :</strong> ensemble des équipements et configurations permettant aux machines de communiquer entre elles.</li>
+            <li><strong>Adresse IP :</strong> identifiant numérique attribué à une machine sur un réseau.</li>
+            <li><strong>VLAN :</strong> réseau local virtuel permettant de séparer logiquement plusieurs groupes d'utilisateurs sur les mêmes équipements.</li>
+            <li><strong>Routeur :</strong> équipement qui permet la communication entre plusieurs réseaux.</li>
+            <li><strong>Switch :</strong> équipement qui relie les machines d'un même réseau local.</li>
+            <li><strong>Trunk :</strong> lien réseau capable de transporter plusieurs VLAN entre deux équipements.</li>
+            <li><strong>SMB :</strong> protocole utilisé pour partager des fichiers ou accéder à des ressources sur un réseau.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">03</span><span class="section-title">Apprentissages critiques (AC)</span></div>
+        <div class="section-body">
+          <ul>
+            <li>
+              <strong>AC11.02 – Comprendre l'architecture et les fondements des systèmes numériques, les principes du codage de l'information, des communications et de l'Internet</strong> –
+              Maîtrise du modèle OSI et TCP/IP : identification des couches concernées par chaque équipement (routeur, switch) et chaque protocole mis en œuvre (VLAN, routage statique).
+            </li>
+            <li>
+              <strong>AC11.03 – Configurer les fonctions de base du réseau local</strong> –
+              Configuration en ligne de commande de routeurs et switches Cisco : interfaces, routes statiques inter-VLAN, création des VLANs, configuration des ports en mode accès et trunk, vérification de la connectivité (ping, traceroute). Utilisation du logiciel PuTTY.
+            </li>
+            <li>
+              <strong>AC11.04 – Maîtriser les rôles et les principes fondamentaux des systèmes d'exploitation afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis</strong> –
+              Interaction avec l'IOS Cisco en ligne de commande pour la configuration et l'administration des équipements, et connexion à un serveur via le protocole SMB.
+            </li>
+            <li>
+              <strong>AC11.05 – Identifier les dysfonctionnements du réseau local et savoir les signaler</strong> –
+              Tests de connectivité systématiques entre tous les segments du réseau, identification et correction des incohérences d'adressage ou de configuration (trunks, routage inter-VLAN).
+            </li>
+            <li>
+              <strong>AC13.01 – Utiliser un système informatique et ses outils</strong> –
+              Utilisation de PuTTY pour accéder aux équipements, de draw.io et Visio pour produire des schémas réseau, et des outils de diagnostic réseau (ping, traceroute).
+            </li>
+            <li>
+              <strong>AC13.06 – S'intégrer dans un environnement propice au développement et au travail collaboratif</strong> –
+              Travail en groupe de 4 : répartition des rôles, coordination sur les choix d'adressage, communication technique rigoureuse et rédaction d'un rapport de synthèse partagé.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">04</span><span class="section-title">Tâches réalisées</span></div>
+        <div class="section-body">
+          <p>Le projet s'est organisé en plusieurs étapes :</p>
+          <ul>
+            <li>Analyse du cahier des charges et répartition des rôles au sein du groupe</li>
+            <li>Conception du plan d'adressage IP avec calcul des sous-réseaux pour chaque département</li>
+            <li>Réalisation des schémas réseau (topologie physique et logique) avec draw.io et visio </li>
+            <li>Configuration des switches : création des VLANs, configuration des ports en mode accès et trunk</li>
+            <li>Configuration des routeurs : interfaces, routes statiques inter-VLAN, NAT</li>
+            <li>Tests de connectivité (ping, traceroute) entre tous les segments du réseau</li>
+            <li>Rédaction du rapport technique de synthèse</li>
+            <li> Connection via un serveur </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">05</span><span class="section-title">Résultats obtenus / Preuves et traces</span></div>
+        <div class="section-body">
+          <ul>
+            <li>Infrastructure réseau fonctionnelle validée en salle de TP avec équipements réels</li>
+            <li>Schémas réseau physique et logique complets (topologie, adressage, VLAN)</li>
+            <li>Fichiers de configuration IOS des routeurs et switches commentés</li>
+            <li>Connectivité complète vérifiée entre tous les hôtes du réseau</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">06</span><span class="section-title">Problèmes rencontrés / points complexes</span></div>
+        <div class="section-body">
+          <p>Le point le plus complexe a été la cohérence entre le plan d'adressage, les VLAN et le routage inter-VLAN. Une petite erreur dans une adresse IP, un masque ou une passerelle pouvait empêcher toute une partie du réseau de communiquer, même si le reste de la configuration semblait correct.</p>
+          <p>La configuration des trunks a aussi demandé plusieurs vérifications. Il fallait bien distinguer les ports en mode accès, réservés à un VLAN précis, et les ports trunk, capables de transporter plusieurs VLAN entre les équipements. Cette différence est essentielle pour comprendre pourquoi deux machines placées dans des services différents peuvent ou non communiquer.</p>
+          <p>Le travail en groupe a ajouté une difficulté d'organisation : chacun avançait sur une partie du réseau, donc il fallait se mettre d'accord sur les noms de VLAN, les sous-réseaux, les adresses de passerelle et les tests à réaliser. Sans communication régulière, les schémas et les configurations pouvaient vite devenir incohérents.</p>
+        </div>
+      </div>
+
+      <div class="sae-section-block">
+        <div class="section-header"><span class="accordion-num">07</span><span class="section-title">Autoévaluation</span></div>
+        <div class="section-body">
+          <p><strong>Apprentissages :</strong> Cette SAE m'a apporté une compréhension concrète du fonctionnement d'un réseau d'entreprise. La pratique sur équipements réels est bien plus formatrice que la théorie seule. J'ai également progressé dans la communication technique et la rédaction de documentation lisible par un tiers.</p>
+          <p><strong>Positionnement :</strong> Je me positionne en <em>acquisition avancée</em> sur la configuration réseau de base. La segmentation VLAN et le routage statique sont maîtrisés. Le routage dynamique (OSPF, RIP) et la sécurisation avancée restent à approfondir.</p>
+          <p><strong>Amélioration possible :</strong> avec le recul, j'aurais pu documenter plus précisément les erreurs rencontrées et les commandes utilisées pour les corriger. Cela aurait rendu le rapport plus utile pour reproduire ou dépanner la maquette.</p>
+        </div>
+      </div>
+      <div class="sae-section-block">
+      <div class="section-header"><span class="accordion-num">08</span><span class="section-title">Preuves</span></div>
+      <div class="section-body">
+      <p>Ces preuves permettent de comprendre le projet sous deux angles : la conception du réseau sur schéma et sa mise en place réelle en salle de TP. Elles montrent donc à la fois la réflexion avant configuration et le résultat concret obtenu sur les équipements.</p>
+      <ul>
+        <li><strong>Schéma logique :</strong> il sert à expliquer l'organisation du réseau du point de vue des adresses, des VLAN et des communications entre services. C'est une preuve importante car elle montre que le réseau n'a pas été monté au hasard : chaque partie correspond à une fonction précise de l'entreprise.</li>
+        <li><strong>Schéma physique :</strong> il montre comment les équipements sont reliés entre eux : routeurs, switches, serveur et postes. Cette preuve complète le schéma logique, car elle permet de comprendre sur quels câbles et quels ports repose la configuration.</li>
+        <li><strong>Photo du réseau réel :</strong> elle prouve que le projet a été manipulé sur du matériel physique, pas seulement dessiné ou simulé. Elle montre la partie concrète du travail : branchements, équipements Cisco, organisation de la maquette et tests en salle.</li>
+        <li><strong>Photo du serveur :</strong> elle montre l'élément utilisé pour les services réseau. Cette preuve est utile car elle relie l'administration réseau aux services fournis aux utilisateurs, comme le partage de fichiers, le web ou d'autres services configurés pendant la SAE.</li>
+      </ul>
+      <div class="proof-container">
+          <a href="img/Visio.Logique_v3.png" target="_blank" class="proof-item">
+            <img src="img/Visio.Logique_v3.png" alt="visio_lgq">
+            <p>Voir le schéma logique en grand</p>
+          </a>
+          <a href="img/Visio Phisique.png" target="_blank" class="proof-item">
+            <img src="img/Visio Phisique.png" alt="visio_physique">
+            <p>Voir le schéma physique en grand</p>
+          </a>
+          <a href="img/Notre_rsx.jpeg" target="_blank" class="proof-item">
+            <img src="img/Notre_rsx.jpeg" alt="visio_lgq">
+            <p>Notre réseau en réel</p>
+          </a>
+          <a href="img/Serveur.jpeg" target="_blank" class="proof-item">
+            <img src="img/Serveur.jpeg" alt="visio_physique">
+            <p> Le serveur</p>
+          </a>
+      </div>
+      </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <footer>
+    <p>Portfolio · Théotime Jouisse · BUT Réseaux & Télécommunications · <span id="year"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

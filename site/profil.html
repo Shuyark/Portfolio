@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil & Projection – Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">TJ</a>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="profil.html" class="active">Profil & Projection</a>
+        <a href="sae.html">Présentation des SAE</a>
+        <a href="bilan.html">Bilan par compétence</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <a href="index.html" class="back-link">← Retour à l'accueil</a>
+      <h1>Profil & Projection professionnelle</h1>
+      <p class="page-intro">Présentation de mon profil en tant que futur professionnel des réseaux et télécommunications, et bilan de mon parcours.</p>
+    </div>
+
+    <div class="content-sections">
+
+      <section class="content-section">
+        <h2>Mon profil</h2>
+        <p>Étudiant en BUT Réseaux & Télécommunications à l'IUT de Caen. Je suis passionné par les infrastructures réseau, la cybersécurité et les nouvelles technologies. Mon parcours m'a permis de développer des compétences aussi bien techniques que transversales.</p>
+        <p>En dehors des cours, j'aime beaucoup les jeux vidéo, car ils demandent de la réflexion, de l'adaptation et parfois une vraie coordination en équipe. C'est un univers qui m'intéresse autant pour le divertissement que pour l'aspect technique : réseaux, serveurs, performances et sécurité.</p>
+        <p>J'aime aussi le sport, plus particulièrement le volleyball. Ce sport m'apporte un bon équilibre et m'aide à développer des qualités importantes comme l'esprit d'équipe, la communication, la concentration et la persévérance. Ces qualités me servent aussi dans les projets de groupe et dans ma façon de travailler.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Évolutions observées</h2>
+        <p>Au fil du premier semestre, plusieurs axes de progression significatifs ont été observés :</p>
+        <ul class="content-list">
+          <li>Une <strong>montée en compétences technique</strong> sur les réseaux : de la théorie à la configuration concrète d'équipements Cisco.</li>
+          <li>Une meilleure <strong>rigueur dans la documentation</strong> : schémas, comptes-rendus et rapports sont devenus plus structurés et précis.</li>
+          <li>Une <strong>autonomie croissante</strong> en Python, en passant de scripts simples à un pipeline de traitement de données réelles.</li>
+          <li>Une <strong>sensibilité à la sécurité numérique</strong>, renforcée par la certification ANSSI, désormais présente dans toute mon approche des systèmes.</li>
+          <li>Un <strong>goût confirmé pour le design et le web</strong>, révélé par la SAE 1.04, que je souhaite continuer à cultiver.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>Projection professionnelle</h2>
+        <p>À l'issue de ma formation BUT R&T, je m'oriente vers les métiers suivants :</p>
+        <div class="projection-cards">
+          <div class="projection-card">
+            <h3>Pentester</h3>
+            <p>Spécialiste du test d'intrusion au sein d'une entreprise.</p>
+          </div>
+          <div class="projection-card">
+            <h3>Expert en cybersécurité</h3>
+            <p>Analyse des risques, mise en place de politiques de sécurité, réponse à incident.</p>
+          </div>
+        </div>
+        <p style="margin-top:1.25rem;">Les secteurs qui m'intéressent particulièrement sont les entreprises spécialisées en <strong>cybersécurité</strong> et les grands groupes ayant des besoins forts en infrastructure réseau. Je souhaite idéalement poursuivre vers un master en cybersécurité.</p>
+        <p>Avec le recul, je remarque que mon regard sur la formation a évolué : je vois davantage les réseaux comme un ensemble complet où la configuration, la sécurité, les supports physiques, les services et la documentation doivent fonctionner ensemble. Cette vision me donne envie de continuer vers des missions où l'on protège, teste et améliore des infrastructures réelles.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Liens & Contact</h2>
+        <p>Retrouvez mon profil en ligne :</p>
+        <div class="links-row">
+          <a href="CV Jouisse Theotime.pdf" class="link-btn">CV en ligne →</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Portfolio · Théotime Jouisse · BUT Réseaux & Télécommunications · <span id="year"></span></p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
